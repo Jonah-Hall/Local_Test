@@ -1,46 +1,64 @@
- <!-- Sample HTML -->
-<header class="top-nav fade-in">
-  <div class="grid-container">
-    <div class="column-24">
-      <!-- desktop sized navigation -->
-      <div class="tablet-hide">
-        <!-- logo / home -->
-        <a href="#" class="top-nav-title">ArcGIS for Developers</a>
-        <!-- primary navigation sections -->
-        <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
-          <a class="top-nav-link" href="#">Dashboard</a>
-          <a class="top-nav-link" href="#">Plans</a>
-          <a class="top-nav-link" href="#">Docs</a>
-        </nav>
-        <!-- user specific dropdowns -->
-        <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
-          <form method="GET" action="/search/" class="inline-block padding-leader-half">
-            <input type="search" placeholder="Search" name="q" style="margin-top: -1px;">
-            <button type="submit" class="hide">Search</button>
-          </form>
-          <a class="top-nav-link icon-ui-user margin-left-1" href="#">Sign In</a>
-          <a class="btn btn-clear margin-left-1" href="#">Sign Up</a>
-        </nav>
-      </div>
+<!DOCTYPE html>
+<html class="html" lang="en-US">
+<link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.6/css/calcite-web.min.css">
+<script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.6/js/calcite-web.min.js"></script>
+ <head>
+  <nav class="breadcrumbs modifier-class">
+  <a href="#" class="crumb">Mountains</a>
+  <span class="crumb">Thing</span>
+  <b href="#" class="crumb">Rivers</b>
+  <c href="#" class="crumb">Lakes</c>
+  <a href="#" class="crumb is-active">Current</a>
 
-      <!-- tablet and mobile sized navigation -->
-      <div class="tablet-show top-nav-flex">
-        <!-- open primary navigation drawer -->
-        <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
-          <a href="/" class="icon-ui-menu top-nav-link js-drawer-toggle" data-drawer="top-nav"><span class="phone-hide">Menu</span></a>
-        </nav>
-        <!-- logo / home -->
-        <header class="top-nav-flex-title">
-          <a href="/" class="top-nav-link">ArcGIS <span class="phone-hide">for Developers</span></a>
-        </header>
-        <!-- user specific actions -->
-        <nav class="top-nav-flex-list text-right" role="navigation" aria-labelledby="usernav">
-          <a class="top-nav-link icon-ui-search js-drawer-toggle" href="#" aria-label="Search"><span class="phone-hide">Search</span></a>
-          <a class="top-nav-link icon-ui-user margin-left-1 js-drawer-toggle" href="#" aria-label="Sign In"><span class="phone-hide">Sign In</span></a>
-        </nav>
-      </div>
-    </div>
 
-  </div>
-</header>
- 
+  <style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Scroll Down</div>
+<div style="background-color:lightgrey;padding:30px 30px 2500px">Put Hero image here</div>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</nav>
+ </head>
+ <Body>
+ </Body>
+</html>
